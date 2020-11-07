@@ -1,14 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>降谷千纮</title>
-    <link>https://snorlaxwei.github.io/</link>
-    <description>Recent content on 降谷千纮</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://snorlaxwei.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>降谷千纮</title>
+        <link>https://snorlaxwei.github.io/</link>
+        <description>关于 LoveIt 主题</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>snorlaxwei@gmail.com (snorlaxwei)</managingEditor>
+            <webMaster>snorlaxwei@gmail.com (snorlaxwei)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+            <atom:link href="https://snorlaxwei.github.io/index.xml" rel="self" type="application/rss+xml" />
+        </channel>
 </rss>
