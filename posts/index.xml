@@ -1,12 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>降谷千纮</title>
-        <link>https://snorlaxwei.github.io/</link>
-        <description>关于 LoveIt 主题</description>
+        <title>所有文章 - 降谷千纮</title>
+        <link>https://snorlaxwei.github.io/posts/</link>
+        <description>所有文章 | 降谷千纮</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>snorlaxwei@gmail.com (snorlaxwei)</managingEditor>
-            <webMaster>snorlaxwei@gmail.com (snorlaxwei)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 07 Nov 2020 15:47:01 &#43;0800</lastBuildDate>
-            <atom:link href="https://snorlaxwei.github.io/index.xml" rel="self" type="application/rss+xml" />
-        <item>
+            <webMaster>snorlaxwei@gmail.com (snorlaxwei)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 07 Nov 2020 15:47:01 &#43;0800</lastBuildDate><atom:link href="https://snorlaxwei.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析</title>
     <link>https://snorlaxwei.github.io/myrocks/</link>
     <pubDate>Sat, 07 Nov 2020 15:47:01 &#43;0800</pubDate>
