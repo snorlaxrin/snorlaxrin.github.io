@@ -2,7 +2,19 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://snorlaxwei.github.io/categories/</loc><lastmod>2020-11-07T15:47:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://snorlaxwei.github.io/</loc><lastmod>2020-11-07T22:43:57&#43;08:00</lastmod><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://snorlaxwei.github.io/en/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://snorlaxwei.github.io/"
+                    /></url><url>
+            <loc>https://snorlaxwei.github.io/posts/</loc><lastmod>2020-11-07T22:43:57&#43;08:00</lastmod><priority>1</priority></url><url>
+            <loc>https://snorlaxwei.github.io/tags/benchmark/</loc><lastmod>2020-11-07T22:43:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://snorlaxwei.github.io/categories/benchmark/</loc><lastmod>2020-11-07T22:43:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://snorlaxwei.github.io/categories/</loc><lastmod>2020-11-07T22:43:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://snorlaxwei.github.io/en/categories/"
@@ -11,10 +23,7 @@
                     hreflang="zh-cn"
                     href="https://snorlaxwei.github.io/categories/"
                     /></url><url>
-            <loc>https://snorlaxwei.github.io/tags/paper/</loc><lastmod>2020-11-07T15:47:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://snorlaxwei.github.io/categories/paper/</loc><lastmod>2020-11-07T15:47:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://snorlaxwei.github.io/posts/</loc><lastmod>2020-11-07T15:47:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://snorlaxwei.github.io/tags/</loc><lastmod>2020-11-07T15:47:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://snorlaxwei.github.io/tags/</loc><lastmod>2020-11-07T22:43:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://snorlaxwei.github.io/en/tags/"
@@ -23,13 +32,8 @@
                     hreflang="zh-cn"
                     href="https://snorlaxwei.github.io/tags/"
                     /></url><url>
-            <loc>https://snorlaxwei.github.io/myrocks/</loc><lastmod>2020-11-07T15:47:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://snorlaxwei.github.io/</loc><lastmod>2020-11-07T15:47:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="https://snorlaxwei.github.io/en/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="zh-cn"
-                    href="https://snorlaxwei.github.io/"
-                    /></url></urlset>
+            <loc>https://snorlaxwei.github.io/ycsb/</loc><lastmod>2020-11-07T22:43:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://snorlaxwei.github.io/about/</loc><lastmod>2020-11-07T22:41:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://snorlaxwei.github.io/tags/paper/</loc><lastmod>2020-11-07T15:47:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://snorlaxwei.github.io/categories/paper/</loc><lastmod>2020-11-07T15:47:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://snorlaxwei.github.io/myrocks/</loc><lastmod>2020-11-07T15:47:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url></urlset>

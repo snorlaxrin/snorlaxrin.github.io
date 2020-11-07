@@ -5,37 +5,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析 - 降谷千纮</title><meta name="Description" content="关于 LoveIt 主题"><meta property="og:title" content="《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析" />
-<meta property="og:description" content="" />
+        <title>YCSB负载 - 降谷千纮</title><meta name="Description" content="关于 LoveIt 主题"><meta property="og:title" content="YCSB负载" />
+<meta property="og:description" content="简介" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://snorlaxwei.github.io/myrocks/" />
+<meta property="og:url" content="https://snorlaxwei.github.io/ycsb/" />
 <meta property="og:image" content="https://snorlaxwei.github.io/logo.png"/>
-<meta property="article:published_time" content="2020-11-07T15:47:01+08:00" />
-<meta property="article:modified_time" content="2020-11-07T15:47:01+08:00" />
+<meta property="article:published_time" content="2020-11-07T22:43:57+08:00" />
+<meta property="article:modified_time" content="2020-11-07T22:43:57+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://snorlaxwei.github.io/logo.png"/>
 
-<meta name="twitter:title" content="《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="YCSB负载"/>
+<meta name="twitter:description" content="简介"/>
 <meta name="application-name" content="降谷千纮">
 <meta name="apple-mobile-web-app-title" content="降谷千纮"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://snorlaxwei.github.io/myrocks/" /><link rel="next" href="https://snorlaxwei.github.io/ycsb/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://snorlaxwei.github.io/ycsb/" /><link rel="prev" href="https://snorlaxwei.github.io/myrocks/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "《MyRocks: LSM-Tree Database Storage Engine Serving Facebook's Social Graph》论文简析",
+        "headline": "YCSB负载",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/snorlaxwei.github.io\/myrocks\/"
+            "@id": "https:\/\/snorlaxwei.github.io\/ycsb\/"
         },"image": [{
                             "@type": "ImageObject",
                             "url": "https:\/\/snorlaxwei.github.io\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "paper","wordcount":  4 ,
-        "url": "https:\/\/snorlaxwei.github.io\/myrocks\/","datePublished": "2020-11-07T15:47:01+08:00","dateModified": "2020-11-07T15:47:01+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                        }],"genre": "posts","keywords": "benchmark","wordcount":  2 ,
+        "url": "https:\/\/snorlaxwei.github.io\/ycsb\/","datePublished": "2020-11-07T22:43:57+08:00","dateModified": "2020-11-07T22:43:57+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxxx","logo": {
                     "@type": "ImageObject",
@@ -57,7 +57,7 @@
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
-                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/myrocks/" selected>简体中文</option></select>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/ycsb/" selected>简体中文</option></select>
                     </a><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
@@ -104,7 +104,7 @@
                 </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
             </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
-                    <select class="language-select" onchange="location = this.value;"><option value="/myrocks/" selected>简体中文</option></select>
+                    <select class="language-select" onchange="location = this.value;"><option value="/ycsb/" selected>简体中文</option></select>
                 </a></div>
     </div>
 </header>
@@ -118,9 +118,9 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>snorlaxwei</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/paper/"><i class="far fa-folder fa-fw"></i>paper</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-07">2020-11-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 4 字&nbsp;
+        </div><article class="page single"><h1 class="single-title animated flipInX">YCSB负载</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>snorlaxwei</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/benchmark/"><i class="far fa-folder fa-fw"></i>benchmark</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-07">2020-11-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -129,15 +129,10 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#摘要">摘要</a>
-      <ul>
-        <li><a href="#贡献">贡献</a></li>
-      </ul>
-    </li>
+    <li><a href="#简介">简介</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="摘要">摘要</h2>
-<h3 id="贡献">贡献</h3></div><div class="post-footer" id="post-footer">
+            </div><div class="content" id="content"><h2 id="简介">简介</h2></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -148,20 +143,19 @@
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://snorlaxwei.github.io/myrocks/" data-title="《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析" data-hashtags="paper"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://snorlaxwei.github.io/myrocks/" data-hashtag="paper"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://snorlaxwei.github.io/myrocks/" data-title="《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://snorlaxwei.github.io/myrocks/" data-title="《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://snorlaxwei.github.io/myrocks/" data-title="《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析"><i class="fab fa-weibo fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://snorlaxwei.github.io/ycsb/" data-title="YCSB负载" data-hashtags="benchmark"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://snorlaxwei.github.io/ycsb/" data-hashtag="benchmark"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://snorlaxwei.github.io/ycsb/" data-title="YCSB负载"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://snorlaxwei.github.io/ycsb/" data-title="YCSB负载"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://snorlaxwei.github.io/ycsb/" data-title="YCSB负载"><i class="fab fa-weibo fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/paper/">paper</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/benchmark/">benchmark</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav">
-            <a href="/ycsb/" class="next" rel="next" title="YCSB负载">YCSB负载<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/myrocks/" class="prev" rel="prev" title="《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析"><i class="fas fa-angle-left fa-fw"></i>《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析</a></div>
 </div>
 <div id="comments"><div id="utterances"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
