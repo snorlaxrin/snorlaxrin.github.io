@@ -61,4 +61,4 @@ Disallow: /
 User-agent: ZoominfoBot
 Disallow: /
 
-Sitemap: https://snorlaxwei.github.io/en/sitemap.xml
+Sitemap: https://snorlaxrin.github.io/en/sitemap.xml

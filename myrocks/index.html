@@ -8,19 +8,19 @@
         <title>《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析 - 降谷千纮</title><meta name="Description" content="关于 LoveIt 主题"><meta property="og:title" content="《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://snorlaxwei.github.io/myrocks/" />
-<meta property="og:image" content="https://snorlaxwei.github.io/logo.png"/>
+<meta property="og:url" content="https://snorlaxrin.github.io/myrocks/" />
+<meta property="og:image" content="https://snorlaxrin.github.io/logo.png"/>
 <meta property="article:published_time" content="2020-11-07T15:47:01+08:00" />
-<meta property="article:modified_time" content="2020-11-07T15:47:01+08:00" />
+<meta property="article:modified_time" content="2020-11-07T23:27:59+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://snorlaxwei.github.io/logo.png"/>
+<meta name="twitter:image" content="https://snorlaxrin.github.io/logo.png"/>
 
 <meta name="twitter:title" content="《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析"/>
 <meta name="twitter:description" content=""/>
 <meta name="application-name" content="降谷千纮">
 <meta name="apple-mobile-web-app-title" content="降谷千纮"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://snorlaxwei.github.io/myrocks/" /><link rel="next" href="https://snorlaxwei.github.io/ycsb/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://snorlaxrin.github.io/myrocks/" /><link rel="next" href="https://snorlaxrin.github.io/ycsb/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -28,23 +28,23 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/snorlaxwei.github.io\/myrocks\/"
+            "@id": "https:\/\/snorlaxrin.github.io\/myrocks\/"
         },"image": [{
                             "@type": "ImageObject",
-                            "url": "https:\/\/snorlaxwei.github.io\/images\/Apple-Devices-Preview.png",
+                            "url": "https:\/\/snorlaxrin.github.io\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
                         }],"genre": "posts","keywords": "paper","wordcount":  4 ,
-        "url": "https:\/\/snorlaxwei.github.io\/myrocks\/","datePublished": "2020-11-07T15:47:01+08:00","dateModified": "2020-11-07T15:47:01+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        "url": "https:\/\/snorlaxrin.github.io\/myrocks\/","datePublished": "2020-11-07T15:47:01+08:00","dateModified": "2020-11-07T23:27:59+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxxx","logo": {
                     "@type": "ImageObject",
-                    "url": "https:\/\/snorlaxwei.github.io\/images\/avatar.png",
+                    "url": "https:\/\/snorlaxrin.github.io\/images\/avatar.png",
                     "width":  896 ,
                     "height":  895 
                 }},"author": {
                 "@type": "Person",
-                "name": "snorlaxwei"
+                "name": "snorlaxrin"
             },"description": ""
     }
     </script></head>
@@ -119,7 +119,7 @@
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>snorlaxwei</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/paper/"><i class="far fa-folder fa-fw"></i>paper</a></span></div>
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>snorlaxrin</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/paper/"><i class="far fa-folder fa-fw"></i>paper</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-07">2020-11-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 4 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -141,14 +141,15 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2020-11-07</span>
+                <span>更新于 2020-11-07&nbsp;<a class="git-hash" href="https://github.com/dillonzq/LoveIt/commit/f4cba63b7be1c7bdb9911e86d98f16445ef39032" target="_blank" title="commit by snorlaxwei(snorlaxwei@gmail.com) f4cba63b7be1c7bdb9911e86d98f16445ef39032: add about.md &amp;&amp; YCSB.md">
+                                    <i class="fas fa-hashtag fa-fw"></i>f4cba63</a></span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://snorlaxwei.github.io/myrocks/" data-title="《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析" data-hashtags="paper"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://snorlaxwei.github.io/myrocks/" data-hashtag="paper"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://snorlaxwei.github.io/myrocks/" data-title="《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://snorlaxwei.github.io/myrocks/" data-title="《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://snorlaxwei.github.io/myrocks/" data-title="《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析"><i class="fab fa-weibo fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://snorlaxrin.github.io/myrocks/" data-title="《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析" data-hashtags="paper"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://snorlaxrin.github.io/myrocks/" data-hashtag="paper"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://snorlaxrin.github.io/myrocks/" data-title="《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://snorlaxrin.github.io/myrocks/" data-title="《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://snorlaxrin.github.io/myrocks/" data-title="《MyRocks: LSM-Tree Database Storage Engine Serving Facebook&#39;s Social Graph》论文简析"><i class="fab fa-weibo fa-fw"></i></a></span>
             </div>
         </div>
     </div>
@@ -167,8 +168,8 @@
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.75.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">snorlaxwei</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.79.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">snorlaxrin</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
@@ -177,5 +178,5 @@
             </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
                 <i class="fas fa-comment fa-fw"></i>
             </a>
-        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"title","label":"Comment","lightTheme":"github-light","repo":"snorlaxwei/hugo-comment"}},"search":{"algoliaAppID":"L7ZH7FGUXY","algoliaIndex":"blog","algoliaSearchKey":"72789af1285280bf77801f44249da8c4","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"title","label":"Comment","lightTheme":"github-light","repo":"snorlaxrin/hugo-comment"}},"search":{"algoliaAppID":"L7ZH7FGUXY","algoliaIndex":"blog","algoliaSearchKey":"72789af1285280bf77801f44249da8c4","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>
